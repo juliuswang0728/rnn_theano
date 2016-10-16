@@ -1,7 +1,7 @@
 import os
 import gzip
-import cPickle as pickle
 import numpy as np
+import cPickle as pickle
 
 def onehot(y, num_classes=10):
 	onehot_vector = np.zeros((y.shape[0], num_classes)).astype(np.float32)
@@ -39,7 +39,7 @@ def load_data(dataset):
             train_set, valid_set, test_set = pickle.load(f)
 
     # Change MNIST pictures to a have the shape [batch, channels, height, width]
-	
+
     train_set = (
         train_set[0].reshape((-1, 28, 28)),
         train_set[1]
