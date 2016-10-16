@@ -26,8 +26,7 @@ n_steps = X.shape[1]
 rnn = layer_rnn(n_steps=n_steps,
                 input_dim=X.shape[2], output_dim=Y.shape[1],
                 hidden_dim=hidden_dim, preload_model='rnn.model')
-rnn.viz_U([0, 1, 2, 6, 9])
-exit()
+#rnn.viz_U([0, 1, 2, 6, 9]) # visualize rows in U matrix by specifying the row indices
 
 rnn.train(X, Y, mini_batch=mini_batch, learning_rate=lr, num_epochs=num_epochs,
             dump_model_name='rnn.model', Xv=Xv, Yv=Yv)
