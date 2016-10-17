@@ -128,7 +128,7 @@ class layer_rnn(object):
 		fig = plt.figure()
 		for i, row in enumerate(row_indices, 1):
 			a = fig.add_subplot(n_rows, 1, i)
-			a.set_title('row %d in U' % i)
+			a.set_title('row %d in U' % row)
 			a.set_yticks([])
 			U_row = U[:, row].reshape(1, U.shape[0])
 			U_row = (U_row - np.min(U_row)) / (np.max(U_row) - np.min(U_row))

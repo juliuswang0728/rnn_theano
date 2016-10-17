@@ -34,6 +34,6 @@ def load_training_log(filename='train.log'):
         val_acc = pickle.load(infile)
         test_acc = pickle.load(infile)
         conf_matrix = pickle.load(infile)
-    print tr_acc, val_acc, test_acc
-    print conf_matrix
+    #print tr_acc, val_acc, test_acc
+    #print conf_matrix
     return tr_acc, val_acc, test_acc, conf_matrix
